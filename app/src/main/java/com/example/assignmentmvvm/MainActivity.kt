@@ -28,10 +28,14 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         // Initialize Retrofit for WeatherService
+/**
         val retrofit = Retrofit.Builder()
             .baseUrl("https://weather.visualcrossing.com/") // Base URL for Retrofit
             .addConverterFactory(GsonConverterFactory.create()) // Use Gson for JSON conversion
             .build()
+        */
+        // Obtain an instance of WeatherService (initialization done in WeatherService companion object in the intreface definition of WeatherService)
+        val weatherService = WeatherService.create()
 
         // Initialize Room database for WeatherDao
         val db = Room.databaseBuilder(
@@ -41,7 +45,7 @@ class MainActivity : ComponentActivity() {
         val weatherDao = db.weatherDao()
 
         // Create WeatherService instance
-        val weatherService = retrofit.create(WeatherService::class.java)
+        //val weatherService = retrofit.create(WeatherService::class.java)
 
         // Initialize ViewModelFactory with WeatherService and WeatherDao
         val factory = WeatherViewModelFactory(weatherService, weatherDao)

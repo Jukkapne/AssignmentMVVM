@@ -14,10 +14,11 @@ import com.example.assignmentmvvm.viewmodel.WeatherViewModel
 @Composable
 fun DetailScreen(weatherViewModel: WeatherViewModel) {
     val weatherCondition by weatherViewModel.weatherCondition.collectAsState()
+    val weatherConditionString by weatherViewModel.weatherConditionString.collectAsState()
     Column(modifier = Modifier.padding(16.dp)) {
         Button(onClick = { weatherViewModel.getLastSavedCondition() }) {
             Text("Load Last Saved Weather")
         }
-        Text(text = weatherCondition, modifier = Modifier.padding(8.dp))
+        Text(text = weatherConditionString, modifier = Modifier.padding(8.dp))
     }
 }
