@@ -31,8 +31,6 @@ data class WeatherData(
         // A descriptive String of the weather conditions (e.g., "Sunny", "Rainy").
         // This text can be directly displayed in the UI to describe the day's weather.
         val conditions: String,
-        val humidity: Double, // Humidity percentage
-        val precip: Double, // Precipitation volume
-        val snow: Double? // Snow volume, nullable as it might not be present
+
     )
 }
