@@ -24,7 +24,7 @@ interface WeatherService {
      */
 
    @GET("VisualCrossingWebServices/rest/services/timeline/Helsinki%2C%20finland?unitGroup=metric&key=4LFDB8ATNA8KHL8KBN7LVXG3G&contentType=json")
-   suspend fun getTodayWeather(): WeatherData
+   suspend fun getTodayWeather(): WeatherData  // WeatherData does not need imported because the WeatherData class is in the same package (model) as WeatherService
 
     companion object {
         /**
