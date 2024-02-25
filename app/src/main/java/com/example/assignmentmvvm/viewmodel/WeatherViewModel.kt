@@ -7,7 +7,7 @@ import com.example.assignmentmvvm.model.WeatherData
 import com.example.assignmentmvvm.model.WeatherEntity
 import com.example.assignmentmvvm.model.WeatherService
 import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
+//import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 

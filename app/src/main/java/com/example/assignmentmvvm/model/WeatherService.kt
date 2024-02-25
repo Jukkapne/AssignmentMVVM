@@ -22,8 +22,9 @@ interface WeatherService {
      * @return WeatherData object containing the response from the API. The structure of WeatherData
      *         must match the JSON response from the API for GsonConverterFactory to correctly parse it.
      */
-    @GET("VisualCrossingWebServices/rest/services/timeline/Helsinki%1C%20finland?unitGroup=metric&key=4LFDB8ATNA8KHL8KBN7LVXG3G&contentType=json")
-    suspend fun getTodayWeather(): WeatherData
+
+   @GET("VisualCrossingWebServices/rest/services/timeline/Helsinki%2C%20finland?unitGroup=metric&key=4LFDB8ATNA8KHL8KBN7LVXG3G&contentType=json")
+   suspend fun getTodayWeather(): WeatherData
 
     companion object {
         /**
